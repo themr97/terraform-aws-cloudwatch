@@ -1,7 +1,7 @@
 locals {
   all_controls = {
     UnauthorizedAPICalls = {
-      pattern     = "{($.errorCode=\"*UnauthorizedOperation\") || ($.errorCode=\"AccessDenied*\")}"
+      pattern     = "{ ($.errorCode=\"*UnauthorizedOperation\") || ($.errorCode=\"AccessDenied*\") }"
       description = "Monitoring unauthorized API calls will help reveal application errors and may reduce time to detect malicious activity."
     }
 
@@ -79,7 +79,7 @@ locals {
   ###############
 
   prefix   = var.use_random_name_prefix ? "${random_pet.this[0].id}-" : var.name_prefix
-  controls = { for k, v in local.all_controls : k => v if !contains(var.disabled_controls, k) }
+  controls = { for k, v in local.all_controls : k => merge(v, try(var.control_overrides[k], {})) if var.create && !contains(var.disabled_controls, k) }
 }
 
 resource "random_pet" "this" {
@@ -89,7 +89,7 @@ resource "random_pet" "this" {
 }
 
 resource "aws_cloudwatch_log_metric_filter" "this" {
-  for_each = var.create ? local.controls : {}
+  for_each = local.controls
 
   name           = "${local.prefix}${each.key}"
   pattern        = each.value["pattern"]
@@ -104,7 +104,7 @@ resource "aws_cloudwatch_log_metric_filter" "this" {
 }
 
 resource "aws_cloudwatch_metric_alarm" "this" {
-  for_each = var.create ? local.controls : {}
+  for_each = local.controls
 
   metric_name       = aws_cloudwatch_log_metric_filter.this[each.key].id
   namespace         = lookup(each.value, "namespace", var.namespace)
@@ -113,8 +113,8 @@ resource "aws_cloudwatch_metric_alarm" "this" {
 
   actions_enabled           = lookup(each.value, "actions_enabled", var.actions_enabled)
   alarm_actions             = lookup(each.value, "alarm_actions", var.alarm_actions)
-  ok_actions                = lookup(each.value, "ok_actions", null)
-  insufficient_data_actions = lookup(each.value, "insufficient_data_actions", null)
+  ok_actions                = lookup(each.value, "ok_actions", var.ok_actions)
+  insufficient_data_actions = lookup(each.value, "insufficient_data_actions", var.insufficient_data_actions)
 
   comparison_operator                   = lookup(each.value, "comparison_operator", "GreaterThanOrEqualToThreshold")
   evaluation_periods                    = lookup(each.value, "evaluation_periods", 1)

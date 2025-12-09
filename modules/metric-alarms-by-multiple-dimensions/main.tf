@@ -1,7 +1,7 @@
 resource "aws_cloudwatch_metric_alarm" "this" {
-  for_each = var.create_metric_alarm && length(keys(var.dimensions)) > 0 ? var.dimensions : {}
+  for_each = { for k, v in var.dimensions : k => v if var.create_metric_alarm }
 
-  alarm_name        = format("%s%s", var.alarm_name, each.key)
+  alarm_name        = format("%s%s%s", var.alarm_name, var.alarm_name_delimiter, each.key)
   alarm_description = var.alarm_description
   actions_enabled   = var.actions_enabled
 
@@ -35,6 +35,7 @@ resource "aws_cloudwatch_metric_alarm" "this" {
       label       = lookup(metric_query.value, "label", null)
       return_data = lookup(metric_query.value, "return_data", null)
       expression  = lookup(metric_query.value, "expression", null)
+      period      = lookup(metric_query.value, "period", null)
 
       dynamic "metric" {
         for_each = lookup(metric_query.value, "metric", [])

@@ -14,13 +14,13 @@ $ terraform apply
 
 Note that this example may create resources which cost money. Run `terraform destroy` when you don't need these resources.
 
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.12.26 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 2.55 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 5.81 |
 
 ## Providers
 
@@ -31,6 +31,7 @@ No providers.
 | Name | Source | Version |
 |------|--------|---------|
 | <a name="module_alarm"></a> [alarm](#module\_alarm) | ../../modules/metric-alarm | n/a |
+| <a name="module_alarm_anomaly"></a> [alarm\_anomaly](#module\_alarm\_anomaly) | ../../modules/metric-alarm | n/a |
 | <a name="module_alarm_metric_query"></a> [alarm\_metric\_query](#module\_alarm\_metric\_query) | ../../modules/metric-alarm | n/a |
 | <a name="module_all_lambdas_errors_alarm"></a> [all\_lambdas\_errors\_alarm](#module\_all\_lambdas\_errors\_alarm) | ../../modules/metric-alarm | n/a |
 | <a name="module_aws_lambda_function1"></a> [aws\_lambda\_function1](#module\_aws\_lambda\_function1) | ../fixtures/aws_lambda_function | n/a |
@@ -53,4 +54,4 @@ No inputs.
 | <a name="output_cloudwatch_metric_alarm_id"></a> [cloudwatch\_metric\_alarm\_id](#output\_cloudwatch\_metric\_alarm\_id) | The ID of the Cloudwatch metric alarm |
 | <a name="output_lambda_function1_arn"></a> [lambda\_function1\_arn](#output\_lambda\_function1\_arn) | Lambda function ARN |
 | <a name="output_lambda_function1_name"></a> [lambda\_function1\_name](#output\_lambda\_function1\_name) | Lambda function name |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS -->

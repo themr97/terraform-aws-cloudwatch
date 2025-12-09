@@ -2,6 +2,185 @@
 
 All notable changes to this project will be documented in this file.
 
+## [5.7.2](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/compare/v5.7.1...v5.7.2) (2025-10-21)
+
+### Bug Fixes
+
+* Update CI workflow versions to latest ([#78](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/issues/78)) ([f06e96f](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/commit/f06e96fd1af974a222f7082b2d2950c97f4caa73))
+
+## [5.7.1](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/compare/v5.7.0...v5.7.1) (2025-03-11)
+
+
+### Bug Fixes
+
+* Fix example of alarm with anomaly detection ([#77](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/issues/77)) ([698cd72](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/commit/698cd7296f9182b1bc430e0b55084f3a6cc57b16))
+
+## [5.7.0](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/compare/v5.6.1...v5.7.0) (2024-12-19)
+
+
+### Features
+
+* Add Log Anomaly Detection Support ([#74](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/issues/74)) ([e62a3b7](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/commit/e62a3b725a4d696ba4cf2dd864d64b611834247e))
+
+## [5.6.1](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/compare/v5.6.0...v5.6.1) (2024-10-11)
+
+
+### Bug Fixes
+
+* Update CI workflow versions to latest ([#73](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/issues/73)) ([67f2ee7](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/commit/67f2ee7a381e1b1a53c579bd1f97416ad7b264d5))
+
+## [5.6.0](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/compare/v5.5.0...v5.6.0) (2024-09-09)
+
+
+### Features
+
+* Support `aws_cloudwatch_log_data_protection_policy` ([#70](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/issues/70)) ([2b434f3](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/commit/2b434f3a85b73ea4fa26d3fe27ce60949123b7d8))
+
+## [5.5.0](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/compare/v5.4.0...v5.5.0) (2024-08-09)
+
+
+### Features
+
+* Support `aws_cloudwatch_log_account_policy` ([#71](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/issues/71)) ([1842707](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/commit/1842707800e5e2da87e9779010af3a4cefb85e79))
+
+## [5.4.0](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/compare/v5.3.1...v5.4.0) (2024-06-23)
+
+
+### Features
+
+* Log Subscription Filter ([#69](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/issues/69)) ([3fe3e1e](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/commit/3fe3e1ea91aca61e9199b98d3aa9132db2400d33))
+
+## [5.3.1](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/compare/v5.3.0...v5.3.1) (2024-03-07)
+
+
+### Bug Fixes
+
+* Update CI workflow versions to remove deprecated runtime warnings ([#67](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/issues/67)) ([e62e629](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/commit/e62e629d56eff754da2eb3bf761e53932bdd5f2c))
+
+## [5.3.0](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/compare/v5.2.0...v5.3.0) (2024-02-26)
+
+
+### Features
+
+* Add option to define a delimiter for metric-alarms-by-multiple-dimensions ([#66](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/issues/66)) ([0959943](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/commit/0959943266ef9a1fbd8934034a7aa36eb2e8e891))
+
+## [5.2.0](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/compare/v5.1.0...v5.2.0) (2024-02-17)
+
+
+### Features
+
+* Cloudwatch composite alarm ([#65](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/issues/65)) ([3108669](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/commit/31086694efafbcad414853b33b9a2f362d8cacdd))
+
+## [5.1.0](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/compare/v5.0.0...v5.1.0) (2024-01-14)
+
+
+### Features
+
+* Added support for Cloudwatch metric stream ([#64](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/issues/64)) ([0aeaf26](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/commit/0aeaf26eca07a825473a99f59d4a76c33fbc81f9))
+
+## [5.0.0](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/compare/v4.5.0...v5.0.0) (2023-12-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* Add `log_group_class` to log group, bump AWS provider version to 5.x (#63)
+
+### Features
+
+* Add `log_group_class` to log group, bump AWS provider version to 5.x ([#63](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/issues/63)) ([d0f3343](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/commit/d0f3343d631e57e4708c2ebbe7d558fcfdfde57a))
+
+## [4.5.0](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/compare/v4.4.0...v4.5.0) (2023-12-12)
+
+
+### Features
+
+* Support `aws_cloudwatch_query_definition` and add `skip_destroy` argument to `aws_cloudwatch_log_group` ([#60](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/issues/60)) ([5cc5efb](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/commit/5cc5efbb954aa0f1654fe7c9784b5256f44bbe04))
+
+## [4.4.0](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/compare/v4.3.0...v4.4.0) (2023-12-11)
+
+
+### Features
+
+* Allow setting dimensions on CloudWatch Metric Filters ([#57](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/issues/57)) ([72084b3](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/commit/72084b35c7b6bbc2be12bdb2b2fe5a48a294c087))
+
+## [4.3.0](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/compare/v4.2.1...v4.3.0) (2023-05-17)
+
+
+### Features
+
+* Add support for `period` in `metric_query_block` ([#53](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/issues/53)) ([8dd8161](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/commit/8dd8161dd04dd218c33c469766730293ea87a811))
+
+### [4.2.1](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/compare/v4.2.0...v4.2.1) (2023-01-10)
+
+
+### Bug Fixes
+
+* Make unauthorized pattern match exact ([#50](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/issues/50)) ([03d43d5](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/commit/03d43d5de5c5266efbd5764901af0c928e112323))
+
+## [4.2.0](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/compare/v4.1.0...v4.2.0) (2023-01-03)
+
+
+### Features
+
+* Add option to specify metric transformation unit ([#49](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/issues/49)) ([5116f50](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/commit/5116f5045b0a5011e117ed8a7f42b5d63e0f9286))
+
+## [4.1.0](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/compare/v4.0.0...v4.1.0) (2023-01-03)
+
+
+### Features
+
+* Updated UnauthorizedAPICalls pattern to pass CIS v1.2.0 ([#48](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/issues/48)) ([6901778](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/commit/6901778222b8eeff38599582925a0dc291291c16))
+
+## [4.0.0](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/compare/v3.3.0...v4.0.0) (2022-10-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* Update supported Terraform min version to v1.0+ and AWS provider to v4.0+ (#47)
+
+### Features
+
+* Update supported Terraform min version to v1.0+ and AWS provider to v4.0+ ([#47](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/issues/47)) ([4fa9065](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/commit/4fa90657173940df5c84915ba54c458386210b32))
+
+## [3.3.0](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/compare/v3.2.0...v3.3.0) (2022-07-18)
+
+
+### Features
+
+* Add option to specify default ok no data actions ([#44](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/issues/44)) ([fdb39b7](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/commit/fdb39b74f0edb67c8a987ef1ed049ef99cf1f2f2))
+
+## [3.2.0](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/compare/v3.1.0...v3.2.0) (2022-04-14)
+
+
+### Features
+
+* Allow overriding items for each control in `cis-alarms` module ([#41](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/issues/41)) ([f04d5d1](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/commit/f04d5d1019a724e4a415768113858e7ad9d8422e))
+
+## [3.1.0](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/compare/v3.0.0...v3.1.0) (2022-04-12)
+
+
+### Features
+
+* Added wrappers for all modules ([#40](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/issues/40)) ([943debc](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/commit/943debcf60f07bd3ead912aaafe19ddca9451405))
+
+## [3.0.0](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/compare/v2.5.0...v3.0.0) (2022-04-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* Added log-stream module, updated versions to 0.13+ (#38)
+
+### Features
+
+* Added log-stream module, updated versions to 0.13+ ([#38](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/issues/38)) ([b426858](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/commit/b42685899793c3ae1733844f07c610e9aa663250))
+
+## [2.5.0](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/compare/v2.4.1...v2.5.0) (2022-03-18)
+
+
+### Features
+
+* Added anomaly detection support ([#36](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/issues/36)) ([7fd2eea](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/commit/7fd2eea01d33aeef171424e0530f3a893fddfb38))
+
 ### [2.4.1](https://github.com/terraform-aws-modules/terraform-aws-cloudwatch/compare/v2.4.0...v2.4.1) (2022-01-21)
 
 

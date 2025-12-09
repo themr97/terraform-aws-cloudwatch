@@ -16,6 +16,12 @@ variable "name_prefix" {
   default     = ""
 }
 
+variable "control_overrides" {
+  description = "A map of overrides to apply to each control"
+  default     = {}
+  type        = any
+}
+
 variable "disabled_controls" {
   description = "List of IDs of disabled CIS controls"
   type        = list(string)
@@ -50,4 +56,16 @@ variable "tags" {
   description = "A mapping of tags to assign to all resources"
   type        = map(string)
   default     = {}
+}
+
+variable "ok_actions" {
+  description = "List of ARNs to put as Cloudwatch OK actions (eg, ARN of SNS topic)"
+  type        = list(string)
+  default     = []
+}
+
+variable "insufficient_data_actions" {
+  description = "List of ARNs to put as Cloudwatch insuficient data actions (eg, ARN of SNS topic)"
+  type        = list(string)
+  default     = []
 }

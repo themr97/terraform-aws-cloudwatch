@@ -9,6 +9,12 @@ variable "alarm_name" {
   type        = string
 }
 
+variable "alarm_name_delimiter" {
+  description = "Delimiter between alarm name and dimension key. Use dash or underscore for pretty alert names."
+  type        = string
+  default     = ""
+}
+
 variable "alarm_description" {
   description = "The description for the alarm."
   type        = string
@@ -75,7 +81,7 @@ variable "datapoints_to_alarm" {
 variable "dimensions" {
   description = "The dimensions for the alarm's associated metric."
   type        = any
-  default     = null
+  default     = {}
 }
 
 variable "alarm_actions" {
