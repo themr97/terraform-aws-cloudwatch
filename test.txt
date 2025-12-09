@@ -1,1 +1,3 @@
 test
+API_KEY = "hfklshkfjdshik42j3h43ggsjsgd"
+DB_PASSWORD = "HElloWORLD123"
